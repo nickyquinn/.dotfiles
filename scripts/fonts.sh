@@ -3,6 +3,7 @@ fonts=(
   font-consolas-for-powerline
   font-fira-code-nerd-font
   font-fira-code
+  font-fira-mono-nerd-font
   font-menlo-for-powerline
   font-meslo-lg-dz
   font-meslo-lg-nerd-font

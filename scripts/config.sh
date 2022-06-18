@@ -34,8 +34,7 @@ code_as_default_text_editor() {
 }
 
 setup_github_ssh() {
-  info "Using $SSH_PASSPHRASE"
-  ssh-keygen -t ed25519 -C $SSH_PASSPHRASE
+  ssh-keygen -t ed25519
 
   info "Adding ssh key to keychain"
   ssh-add -K ~/.ssh/id_ed25519
@@ -50,12 +49,9 @@ stow_dotfiles() {
     ".gitconfig"
     ".aliases"
     ".zshrc"
-    ".p10k.sh"
-    ".vimrc"
+    ".nq-oh-my-posh.omp.json"
   )
   local folders=(
-    ".config/nvim"
-    ".config/kitty"
     ".git-templates/hooks"
     ".ssh"
   )
@@ -70,7 +66,7 @@ stow_dotfiles() {
     mkdir -p "$HOME/$d"
   done
 
-  local dotfiles="git kitty nvim ssh vim zsh"
+  local dotfiles="git ssh zsh oh-my-posh"
   info "Stowing: $dotfiles"
   stow -d stow --verbose 1 --target $HOME $dotfiles
 }

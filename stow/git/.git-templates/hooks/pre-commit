@@ -3,6 +3,6 @@
 branch="$(git rev-parse --abbrev-ref HEAD)"
 main_branches=("main" "master")
 if printf '%s\n' "${main_branches[@]}" | grep -Fxq $branch; then
-  echo "Nein! Committing to < $branch > forbidden -.-"
+  echo "Committing to < $branch > forbidden by your pre-commit hook -.-"
   exit 1
 fi

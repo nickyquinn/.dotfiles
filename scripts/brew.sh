@@ -27,8 +27,11 @@ install_brew_casks() {
     if brew list --casks | grep "$cask" > /dev/null; then
       warn "Cask $cask is already installed"
     else
+    # Note reinstall instead of install to avoid already-installed error
+    # and --force to ensure it gets dropped into the Applications folder
+    # replacing the existing app.
       info "Installing cask < $cask >"
-      brew install --cask "$cask"
+      brew reinstall --cask "$cask" --force
     fi
   done
 }

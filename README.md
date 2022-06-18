@@ -2,16 +2,17 @@
 
 [![shell](https://github.com/protiumx/.dotfiles/actions/workflows/shell.yml/badge.svg)](https://github.com/protiumx/.dotfiles/actions/workflows/shell.yml)
 
-My dotfiles to set up a dev environment in a **macOS** machine.
-The `dotfiles` script installs all the packages and apps I use, [stow](https://www.gnu.org/software/stow/) my dotfiles and sets all my preffered macOS configurations.
+My dotfiles to set up a dev environment on a **macOS** machine.
+The `dotfiles` script installs all the packages and apps I use, [stow](https://www.gnu.org/software/stow/) my dotfiles and sets all my preferred macOS configurations.
 
-Check my [Medium article](https://medium.com/@protiumx/bash-gnu-stow-take-a-walk-while-your-new-macbook-is-being-set-up-351a6f2f9225).
+Check Brian Mayo's [Medium article](https://medium.com/@protiumx/bash-gnu-stow-take-a-walk-while-your-new-macbook-is-being-set-up-351a6f2f9225).
 
 ## Installing
 
 Run the `dotfiles` script:
+
 ```sh
-curl -sO https://raw.githubusercontent.com/protiumx/.dotfiles/main/dotfiles
+curl -sO https://raw.githubusercontent.com/nickyquinn/.dotfiles/main/dotfiles
 ```
 
 ## Reusing

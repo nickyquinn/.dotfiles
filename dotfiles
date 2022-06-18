@@ -1,8 +1,9 @@
+
 #!/usr/bin/env bash
 
 set -o errexit
 
-REPO_URL=https://github.com/protiumx/.dotfiles.git
+REPO_URL=https://github.com/nickyquinn/.dotfiles.git
 REPO_PATH="$HOME/.dotfiles"
 
 reset_color=$(tput sgr 0)
@@ -34,7 +35,6 @@ install_xcode() {
   fi
 }
 
-
 install_homebrew() {
   export HOMEBREW_CASK_OPTS="--appdir=/Applications"
   if hash brew &>/dev/null; then
@@ -48,12 +48,12 @@ install_homebrew() {
 
 info "####### dotfiles #######"
 read -p "Press enter to start:"
-info "Bootstraping..."
+info "Bootstrapping..."
 
 install_xcode
 install_homebrew
 
-info "Installing Git"
+info "Installing git"
 brew install git
 
 info "Cloning .dotfiles repo from $REPO_URL into $REPO_PATH"
@@ -63,6 +63,3 @@ info "Change path to $REPO_PATH"
 cd "$REPO_PATH" >/dev/null
 
 ./install.sh
-
-
-
