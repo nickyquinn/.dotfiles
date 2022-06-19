@@ -8,6 +8,7 @@ fonts=(
   font-meslo-lg-dz
   font-meslo-lg-nerd-font
   font-meslo-lg
+  font-inter
 )
 
 install_fonts() {
