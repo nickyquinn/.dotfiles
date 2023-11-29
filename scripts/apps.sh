@@ -30,6 +30,7 @@ apps=(
   mattermost
   nextcloud
   protonmail-bridge
+  rectangle
   rider
   signal
   standard-notes
