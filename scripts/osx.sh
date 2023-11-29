@@ -2,10 +2,10 @@ setup_osx() {
   info "Configuring MacOS default settings"
 
   # Disable prompting to use new exteral drives as Time Machine volume
-  defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+  #defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
   # Show external hard drives on desktop
-  defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+  #defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 
   # Hide hard drives on desktop
   defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
@@ -45,8 +45,8 @@ setup_osx() {
 
   # Set Home as the default location for new Finder windows
   # For other paths, use `PfLo` and `file:///full/path/here/`
-  defaults write com.apple.finder NewWindowTarget -string "PfHm"
-  defaults write com.apple.finder NewWindowTargetPath -string "file:///${HOME}/"
+  #defaults write com.apple.finder NewWindowTarget -string "PfHm"
+  #defaults write com.apple.finder NewWindowTargetPath -string "file:///${HOME}/"
 
   # Enable the Develop menu and the Web Inspector in Safari
   defaults write com.apple.Safari IncludeDevelopMenu -bool true
@@ -57,10 +57,10 @@ setup_osx() {
   defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
   # Have the Dock show only active apps
-  defaults write com.apple.dock static-only -bool true
+  #defaults write com.apple.dock static-only -bool true
 
   # Set Dock autohide
-  defaults write com.apple.dock autohide -bool true
+  #defaults write com.apple.dock autohide -bool true
 #   defaults write com.apple.dock largesize -float 128
 #   defaults write com.apple.dock "minimize-to-application" -bool true
   defaults write com.apple.dock tilesize -float 34

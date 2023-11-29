@@ -26,3 +26,5 @@
 	trustExitCode = true
 [mergetool "bc3"]
 	trustExitCode = true
+[pull]
+	rebase = false

@@ -1,9 +1,11 @@
 taps=(
-    homebrew/cask
-    homebrew/core
-    jandedobbeleer/oh-my-posh
-    wpscanteam/tap
-    homebrew/cask-versions
+  homebrew/cask
+  homebrew/core
+  homebrew/cask-fonts
+  homebrew/cask-versions
+  jandedobbeleer/oh-my-posh
+  macos-fuse-t/cask
+  wpscanteam/tap
 )
 
 packages=(
@@ -18,6 +20,10 @@ packages=(
     imagemagick
     stow
     duti
+    sqlite
+    nvm
+    yarn
+    git
 )
 
 install_packages() {
