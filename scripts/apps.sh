@@ -6,6 +6,7 @@ apps=(
   db-browser-for-sqlite
   dotnet-sdk
   drawio
+  duckduckgo
   exodus
   firefox
   firefox-developer-edition
