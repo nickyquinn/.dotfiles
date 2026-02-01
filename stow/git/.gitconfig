@@ -16,6 +16,7 @@
 	tool = bc3
 [mergetool]
 	prompt = false
+	keepBackup = false
 [mergetool "bcomp"]
   trustExitCode = true
   cmd = "/usr/local/bin/bcomp" \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
@@ -28,3 +29,55 @@
 	trustExitCode = true
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main
+[alias]
+    prune-branches = !git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -D
+    local-only-branches = !git branch -vv | cut -c 3- | awk '$3 !~ /\\[/ {print $1}'
+    graph = log --oneline --graph --decorate
+    authors = !git log --format='%aN <%aE>' | grep -v 'users.noreply.github.com' | sort -u --ignore-case
+    unadd = reset HEAD
+
+# Quality-of-life improvements
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[tag]
+    sort = version:refname
+[init]
+    defaultBranch = main
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+[push]
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+[help]
+    autocorrect = prompt
+[commit]
+    verbose = true
+[rerere]
+    enabled = true
+    autoupdate = true
+[core]
+    excludesfile = ~/.gitignore
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+[core]
+    # fsmonitor = true
+    # untrackedCache = true
+[merge]
+    # (just 'diff3' if git version < 2.3)
+    conflictstyle = diff3
+[pull]
+    rebase = true
